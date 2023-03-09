@@ -10,11 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Exam Bro'),
     );
   }
 }
@@ -58,17 +59,23 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
     super.didChangeAppLifecycleState(state);
 
     if (state == AppLifecycleState.paused) {
+      // Generate Time Count Down To call func
+
+      print("app on paused");
+
       _generateRandomNumber();
       // _tes();
     }
 
     if (state == AppLifecycleState.resumed) {
-      _generateRandomNumber();
+      print("app on resumed");
+
+      // _generateRandomNumber();
       // _tes();
     }
 
     if (state == AppLifecycleState.inactive) {
-      _generateRandomNumber();
+      // _generateRandomNumber();
       // _tes();
     }
 
@@ -94,15 +101,7 @@ class _MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Kotlin generates the following number:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+          children: <Widget>[],
         ),
       ),
       floatingActionButton: FloatingActionButton(
