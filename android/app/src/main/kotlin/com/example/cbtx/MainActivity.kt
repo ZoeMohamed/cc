@@ -169,11 +169,9 @@ class MainActivity: FlutterActivity() {
 //                        val pendingIntent =
 //                            PendingIntent.getActivity(this, 0, notificationIntent, 0)
 //                        try {
-//                            print("ANJING")
 //                            pendingIntent.send()
 //                        } catch (e: PendingIntent.CanceledException) {
 //                            e.printStackTrace()
-//                            print("BABI")
 //                        }
 //
 //                    }
